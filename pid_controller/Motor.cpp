@@ -13,4 +13,5 @@ Motor::Motor(): speed(0), inertia(1), MAX_TORQUE(5) {}
 Motor::Motor(double inertia): speed(0), inertia(inertia), MAX_TORQUE(5) {}
 void Motor::setLoad(double new_inertia) {
   speed = inertia * speed / new_inertia;
+  inertia = new_inertia;
 }
